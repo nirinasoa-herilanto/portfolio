@@ -43,7 +43,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 On this project, I store project files outside the `app` directories and keeps it only for routing. For more details, you could visit the docs on [Project organisation](https://nextjs.org/docs/app/building-your-application/routing/colocation#store-project-files-outside-of-app)
 
-## Deployement N/A
+## Deployement
+
+The project is available on this link [click here](https://nirinasoa-herilanto.vercel.app/) and deployed on Vercel.
 
 ## Author
 
