@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## "portfolio"
+
+A portfolio and discovery/learning of the new futures of Next.js 13 with the app directory.
+
+You will find many features that will be implemented in the future. So don't hesitate to let a feedback or mail me at [nirinasoa herilanto](mailto:nirinasoa.herilanto@gmail.com) That could help me to improve my understanding of these features.
+
 ## Getting Started
 
 First, run the development server:
@@ -32,3 +38,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Project organisation
+
+On this project, I store project files outside the `app` directories and keeps it only for routing. For more details, you could visit the docs on [Project organisation](https://nextjs.org/docs/app/building-your-application/routing/colocation#store-project-files-outside-of-app)
+
+## Deployement N/A
+
+## Author
+
+Nirinasoa Herilanto

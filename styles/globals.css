@@ -1,0 +1,43 @@
+@import './variable.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1 {
+    font-size: 28px;
+    color: var(--zinc);
+
+    @screen md {
+      font-size: 32px;
+    }
+
+    @screen lg {
+      font-size: 36px;
+    }
+  }
+
+  p,
+  li {
+    font-size: 16px;
+    color: var(--zinc);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    @apply to-blue-800;
+    text-decoration: none;
+  }
+}

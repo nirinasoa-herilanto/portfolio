@@ -1,0 +1,18 @@
+.welcoming {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.repo-link {
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  color: var(--white);
+  text-align: center;
+  font-weight: bold;
+  background: #5c6584;
+  box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.5);
+}
