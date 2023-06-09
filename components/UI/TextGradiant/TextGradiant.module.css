@@ -1,0 +1,15 @@
+.text-gradiant {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.dark-gradiant {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff4e50, #f9d423);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
