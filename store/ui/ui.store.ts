@@ -17,7 +17,7 @@ const useAppUI = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
 
   useEffect(() => {
-    theme === 'dark' ? setIsDark(false) : setIsDark(true);
+    theme === 'dark' ? setIsDark(true) : setIsDark(false);
   }, [isDark, theme]);
 
   return { isDark, switchThemeHandler } as IAppUI;

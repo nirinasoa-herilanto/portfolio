@@ -22,7 +22,7 @@ const DarkLightButton: React.FC<DarkLightButtonProps> = ({ className }) => {
 
   return (
     <div className={`dark-light-btn ${className || ''}`}>
-      {isDark ? (
+      {!isDark ? (
         <FaMoon
           className={`${style.icon} ${style.dark}`}
           onClick={switchThemeHandler}
