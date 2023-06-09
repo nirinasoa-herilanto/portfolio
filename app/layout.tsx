@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
 import { AppStoreProvider } from '@nhr/store';
+import { ThemeWrapper } from '@nhr/components';
 
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['400'] });
+const montserrat = Montserrat({ subsets: ['latin'], weight: ['500'] });
 
 export const metadata: Metadata = {
   title: 'Nirinasoa Herilanto',
@@ -22,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <AppStoreProvider>
-          <main>{children}</main>
-        </AppStoreProvider>
+        <ThemeWrapper>
+          <AppStoreProvider>
+            <main>{children}</main>
+          </AppStoreProvider>
+        </ThemeWrapper>
       </body>
     </html>
   );
