@@ -1,0 +1,12 @@
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.light {
+  color: #ffa900;
+}
+
+.dark {
+  color: #172554;
+}
