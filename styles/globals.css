@@ -18,11 +18,11 @@
     font-size: 28px;
 
     @screen md {
-      font-size: 32px;
+      font-size: 36px;
     }
 
     @screen lg {
-      font-size: 36px;
+      font-size: 42px;
     }
   }
 
@@ -30,6 +30,10 @@
   li {
     @apply text-slate-950 dark:text-slate-400;
     font-size: 16px;
+
+    @screen md {
+      font-size: 18px;
+    }
   }
 
   ul {
@@ -38,6 +42,11 @@
 
   a {
     @apply text-blue-800 dark:text-white;
+    font-size: 16px;
     text-decoration: none;
+
+    @screen md {
+      font-size: 18px;
+    }
   }
 }
