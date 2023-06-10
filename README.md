@@ -43,6 +43,24 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 On this project, I store project files outside the `app` directories and keeps it only for routing. For more details, you could visit the docs on [Project organisation](https://nextjs.org/docs/app/building-your-application/routing/colocation#store-project-files-outside-of-app)
 
+## Styling reference
+
+On this project, I use `tailwind CSS & Postcss`. Here are the color reference used on the project:
+
+```
+  on the background [body]: bg-slate-50 dark:bg-slate-950
+  on the title [h1]: text-blue-600 dark:text-yellow-600
+  on the paragraph [p]: text-slate-950 dark:text-slate-400
+```
+
+NB: `dark:---`allow us to enable dark mode in our project. Notice, if you use dark mode, `dark:---` only work on class or exactly `className`.
+
+```
+  // for example
+
+  <p className="text-slate-950 dark:text-slate-400">I'm a full-stack developer</p>
+```
+
 ## Deployement
 
 The project is available on this link [click here](https://nirinasoa-herilanto.vercel.app/) and deployed on Vercel.
