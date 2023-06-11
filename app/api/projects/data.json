@@ -1,0 +1,148 @@
+[
+  {
+    "_id": "project-1",
+    "project_title": "Portfolio",
+    "project_image": "",
+    "project_description": "This is an project and also my portfolio of learning the new features of Next JS 13 with 'app/' directory",
+    "tech_stacks": ["Next JS", "Typescript", "Tailwind CSS"],
+    "repo_link": "https://github.com/nirinasoa-herilanto/portfolio",
+    "link": "https://nirinasoa-herilanto.vercel.app/",
+    "is_completed": false,
+    "started_at": "June 2023",
+    "end_at": "",
+    "slug": "portfolio"
+  },
+  {
+    "_id": "project-2",
+    "project_title": "Simple React App",
+    "project_image": "",
+    "project_description": "'Simple React App' is a small application with React, typescript, React context API, and Styled components for styling. On this app, we could find a dark/light mode and a simple rating component. NB: During the development of this project, I tried to follow much as possible the React convention, and for the purpose to keep everything reusable.",
+    "tech_stacks": ["React JS", "Typescript", "Styled-component"],
+    "repo_link": "https://github.com/nirinasoa-herilanto/Simple-react-app",
+    "link": "",
+    "is_completed": true,
+    "started_at": "november 2022",
+    "end_at": "June 2023",
+    "slug": "simple-react-app"
+  },
+  {
+    "_id": "project-3",
+    "project_title": "Natours",
+    "project_image": "",
+    "project_description": "Natours is an application for learning Node.JS, Express.JS, MongoDB, how to work effectively with NoSQL data, and how to build a RESTful API with that.",
+    "tech_stacks": ["Node JS", "Express", "Mongo DB"],
+    "repo_link": "https://github.com/nirinasoa-herilanto/natours",
+    "link": "",
+    "is_completed": true,
+    "started_at": "January 2023",
+    "end_at": "March 2023",
+    "slug": "natours"
+  },
+  {
+    "_id": "project-4",
+    "project_title": "Simple Flask App",
+    "project_image": "",
+    "project_description": "An project on my training at Udacity with the full-stack web developer nanodegree program. A part from that, I learn about deployement of an Flask app with some concept of learning Docker, Kubernetes, CI/CD pipeline, and deployed the application to Amazon EKS",
+    "tech_stacks": ["Flask", "Docker", "AWS EKS", "CI/CD pipeline"],
+    "repo_link": "https://github.com/nirinasoa-herilanto/cd0157-Server-Deployment-and-Containerization",
+    "link": "",
+    "is_completed": true,
+    "started_at": "September 2022",
+    "end_at": "October 2022",
+    "slug": "simple-flask-app"
+  },
+  {
+    "_id": "project-5",
+    "project_title": "Coffer Shop",
+    "project_image": "",
+    "project_description": "An project on Udacity Class, that we learn about authorization & permission using the RBAC Sytem with Auth0.",
+    "tech_stacks": [
+      "Flask",
+      "SQLAlchemy",
+      "SQLAlchemy ORM",
+      "Postgresql",
+      "RBAC System with Auth0"
+    ],
+    "repo_link": "https://github.com/nirinasoa-herilanto/Coffee-Shop",
+    "link": "",
+    "is_completed": true,
+    "started_at": "September 2022",
+    "end_at": "October 2022",
+    "slug": "coffer-shop"
+  },
+  {
+    "_id": "project-6",
+    "project_title": "Trivia",
+    "project_image": "",
+    "project_description": "An project on my training at Udacity with the full-stack web developer nanodegree program. A part from that, I learn how to build an RestFull API with Flask, how to write API testing using unittest, how to handle error, how to write an API & project documentation and much more.",
+    "tech_stacks": [
+      "Flask",
+      "SQLAlchemy",
+      "SQLAlchemy ORM",
+      "RestFull API",
+      "Error handling",
+      "API testing",
+      "API documentation",
+      "Project documentation",
+      "Postgresql"
+    ],
+    "repo_link": "https://github.com/nirinasoa-herilanto/Trivia",
+    "link": "",
+    "is_completed": true,
+    "started_at": "September 2022",
+    "end_at": "October 2022",
+    "slug": "trivia"
+  },
+  {
+    "_id": "project-7",
+    "project_title": "Fyyur",
+    "project_image": "",
+    "project_description": "Fyyur is a musical venue and artist booking site that facilitates the discovery and bookings of shows between local performing artists and venues. This site lets you list new artists and venues, discover them, and list shows with artists as a venue owner. An project on my training at Udacity with the full-stack web developer nanodegree program. A part from that, I learn how to modelise our data and how to work with SQL using PostgreSQL as database.",
+    "tech_stacks": [
+      "Flask",
+      "Flask WTF",
+      "SQLAlchemy",
+      "SQLAlchemy ORM",
+      "data modelisation with SQL",
+      "Postgresql"
+    ],
+    "repo_link": "https://github.com/nirinasoa-herilanto/Fyyur",
+    "link": "",
+    "is_completed": true,
+    "started_at": "September 2022",
+    "end_at": "October 2022",
+    "slug": "fyyur"
+  },
+  {
+    "_id": "project-8",
+    "project_title": "University",
+    "project_image": "",
+    "project_description": "University is a project for practical learning JAM STACK structure. I used Next.JS, Tailwind CSS, Firebase auth for user authentication, and STRAPI CMS that's available on my repository. STRAPI repository: https://github.com/nirinasoa-herilanto/University-CMS",
+    "tech_stacks": [
+      "Next JS",
+      "Strapi CMS",
+      "Firebase auth",
+      "Tailwind CSS",
+      "Typescript"
+    ],
+    "repo_link": "https://github.com/nirinasoa-herilanto/University",
+    "link": "",
+    "is_completed": true,
+    "started_at": "September 2021",
+    "end_at": "Mai 2022",
+    "slug": "university"
+  },
+  {
+    "_id": "project-9",
+    "project_title": "Forkify",
+    "project_image": "",
+    "project_description": "Forkify is an recipe application and an learning project on the modern javascript (Udemy - The complete javascript course 2022 by Jonas Schemdtmann)",
+    "tech_stacks": ["Javascript", "MVC Architecture/Pattern", "Parcel bundler"],
+    "repo_link": "https://github.com/nirinasoa-herilanto/Forkify",
+    "link": "",
+    "is_completed": true,
+    "started_at": "August 2022",
+    "end_at": "August 2022",
+    "slug": "forkify"
+  }
+]

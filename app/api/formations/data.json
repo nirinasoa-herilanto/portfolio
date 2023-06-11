@@ -1,0 +1,31 @@
+[
+  {
+    "_id": "formation-1",
+    "formation_name": "Full-stack web developer nanodegree (scholarship)",
+    "description": "An program offered by ALX-T and Udacity. In this program, I learned about: how to work with relational database (SQL) with PostgreSQL as database and data modelization for web apps by building CRUD applications using SQLAlchemy, migrations. How to develop an API with Flask & SQLAlchemy, handle error, API testing, TDD, and how to document an API or project. User permission & authorization (RBAC system). Docker & Kubernetes, and how to deploy the Flask app in AWS EKS. and much more.",
+    "tech_stacks": [
+      "Flask",
+      "SQLAlchemy",
+      "SQLAlchemy ORM",
+      "Auth0",
+      "Docker & Kubernetes",
+      ".etc"
+    ],
+    "formation_type": "Online formation in Udacity",
+    "is_completed": true,
+    "reward_link": "https://www.udemy.com/certificate/UC-6ebb0518-737c-48bd-9477-d025a71384eb/",
+    "started_at": "July 2022",
+    "end_at": "October 2022"
+  },
+  {
+    "_id": "formation-2",
+    "formation_name": "Bachelor's degree in computer science",
+    "description": "",
+    "tech_stacks": [],
+    "formation_type": "University study at Ecole Supérieure Professionnelle en Informatique et Commerce (ESPIC)",
+    "is_completed": true,
+    "reward_link": "",
+    "started_at": "March 2021",
+    "end_at": "December 2022"
+  }
+]
