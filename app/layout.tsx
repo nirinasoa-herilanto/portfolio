@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
 import { AppStoreProvider } from '@nhr/store';
-import { ThemeWrapper } from '@nhr/components';
+import { Header, ThemeWrapper } from '@nhr/components';
 
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['500'] });
 
@@ -25,6 +25,7 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <ThemeWrapper>
           <AppStoreProvider>
+            <Header />
             <main>{children}</main>
           </AppStoreProvider>
         </ThemeWrapper>
