@@ -1,0 +1,26 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.summary div {
+  font-size: 44px;
+
+  @screen md {
+    font-size: 82px;
+  }
+}
+.summary span {
+  font-size: 44px;
+
+  @screen md {
+    font-size: 82px;
+  }
+}
+
+.summary__link {
+  @apply text-white text-center bg-blue-600 shadow-lg;
+  width: 200px;
+  padding: 12px;
+}
