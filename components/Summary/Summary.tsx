@@ -19,7 +19,8 @@ const Summary: React.FC<SummaryProps> = ({ className }) => {
 
       <div className="summary__content">
         <div className="text-slate-800 dark:text-slate-400">
-          I'm <TextGradiant>{sumWording.firstName}</TextGradiant>
+          {`I'm `}
+          <TextGradiant>{sumWording.firstName}</TextGradiant>
         </div>
 
         <div className="text-slate-800 dark:text-slate-400">
