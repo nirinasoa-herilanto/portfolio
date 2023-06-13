@@ -1,9 +1,9 @@
-import { Welcoming } from '@nhr/components';
+import { Hero } from '@nhr/components';
 
-export default function Home() {
+export default function Homepage() {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <Welcoming />
-    </div>
+    <section className="homepage flex justify-center items-center">
+      <Hero />
+    </section>
   );
 }

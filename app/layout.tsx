@@ -26,7 +26,7 @@ export default function RootLayout({
         <ThemeWrapper>
           <AppStoreProvider>
             <Header />
-            <main>{children}</main>
+            <main className="fit">{children}</main>
           </AppStoreProvider>
         </ThemeWrapper>
       </body>
