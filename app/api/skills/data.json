@@ -1,0 +1,37 @@
+[
+  {
+    "_id": "skill-1",
+    "skill_name": "HTML & CSS",
+    "rating": 3.5
+  },
+  {
+    "_id": "skill-2",
+    "skill_name": "Javascript",
+    "rating": 3.5
+  },
+  {
+    "_id": "skill-3",
+    "skill_name": "Typescript",
+    "rating": 2.5
+  },
+  {
+    "_id": "skill-4",
+    "skill_name": "React JS",
+    "rating": 3.5
+  },
+  {
+    "_id": "skill-5",
+    "skill_name": "Apollo Graphql",
+    "rating": 3
+  },
+  {
+    "_id": "skill-6",
+    "skill_name": "Node JS & Express",
+    "rating": 3.5
+  },
+  {
+    "_id": "skill-7",
+    "skill_name": "Flask & SQLAlchemy (ORM)",
+    "rating": 3.5
+  }
+]

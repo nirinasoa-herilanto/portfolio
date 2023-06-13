@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "formation-1",
+    "certification_name": "React - The Complete Guide (incl Hooks, React Router, Redux)",
+    "description": "On this course, I learn and deep dive in React JS (an javascript library) including more features arround this technologie. Within instructor is Maximilian Schwarzmüller | Academind",
+    "tech_stacks": [
+      "React jS",
+      "Next JS",
+      "React with Typescript",
+      "Redux",
+      ".etc"
+    ],
+    "certification_type": "Online formation in Udemy",
+    "is_completed": false,
+    "certification_link": "",
+    "certified_at": ""
+  },
+  {
+    "_id": "formation-2",
+    "certification_name": "Node.js, Express, MongoDB & More: The Complete Bootcamp 2023",
+    "description": "On this course, I learn and deep dive in Node JS, Express, MongoDB, including how to build an API RESTfull and, how to work effectively with NoSQL data. Within intsuctor is Jonas Schemdtmann",
+    "tech_stacks": ["Node JS", "Express", "Mongo DB", ".etc"],
+    "certification_type": "Online formation in Udemy",
+    "is_completed": true,
+    "certification_link": "https://www.udemy.com/certificate/UC-8af00478-5ed1-4aa1-919d-deb0544b7136/",
+    "certified_at": "mars 2023"
+  },
+  {
+    "_id": "formation-3",
+    "certification_name": "The Complete JavaScript Course 2022: From Zero to Expert!",
+    "description": "On this course, I learn javascript language, the new features on this language, OOP with classes and inheritance, tooling, etc. Within intsuctor is Jonas Schmedtmann",
+    "tech_stacks": ["Javascript", "OOP", "ES6", "MVC Architecture", ".etc"],
+    "certification_type": "Online formation in Udemy",
+    "is_completed": true,
+    "certification_link": "https://www.udemy.com/certificate/UC-6ebb0518-737c-48bd-9477-d025a71384eb/",
+    "certified_at": "August 2022"
+  }
+]

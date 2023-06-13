@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-white dark:bg-zinc-800;
+    @apply bg-slate-50 dark:bg-slate-950;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,23 +14,26 @@
   }
 
   h1 {
-    @apply text-blue-600 dark:text-white;
+    @apply text-blue-600 dark:text-yellow-600;
     font-size: 28px;
 
     @screen md {
-      font-size: 32px;
+      font-size: 36px;
     }
 
     @screen lg {
-      font-size: 36px;
+      font-size: 42px;
     }
   }
 
   p,
   li {
-    @apply dark:text-white;
+    @apply text-slate-950 dark:text-slate-400;
     font-size: 16px;
-    color: var(--zinc);
+
+    @screen md {
+      font-size: 18px;
+    }
   }
 
   ul {
@@ -39,6 +42,11 @@
 
   a {
     @apply text-blue-800 dark:text-white;
+    font-size: 16px;
     text-decoration: none;
+
+    @screen md {
+      font-size: 18px;
+    }
   }
 }
