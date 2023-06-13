@@ -18,8 +18,6 @@ const TextGradiant: React.FC<TextGradiantProps> = ({ className, children }) => {
     ui: { isDark },
   } = useAppStore();
 
-  console.log('is dark', isDark);
-
   return (
     <span
       className={`${isDark ? style['dark-gradiant'] : style['text-gradiant']}
