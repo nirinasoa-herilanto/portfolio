@@ -14,7 +14,7 @@ export type ProjectItemProps = {
 const ProjectItem: React.FC<ProjectItemProps> = ({ className, data }) => {
   return (
     <div className={`${style['project-item']} ${className || ''}`}>
-      <div>{data.project_title}</div>
+      <div className="text-slate-950">{data.project_title}</div>
     </div>
   );
 };

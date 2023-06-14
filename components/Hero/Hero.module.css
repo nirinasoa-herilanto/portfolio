@@ -3,9 +3,6 @@
   height: calc(100vh - 82px);
   max-height: 750px;
 
-  padding-left: 20px;
-  padding-right: 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;

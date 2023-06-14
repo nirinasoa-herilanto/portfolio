@@ -15,7 +15,11 @@ export type SkillItemProps = {
 const SkillItem: React.FC<SkillItemProps> = ({ className, data }) => {
   return (
     <div className={`${style['skill-item']} ${className || ''}`}>
-      <div className={`${style['skill-item__name']}`}>{data.skill_name}</div>
+      <div
+        className={`${style['skill-item__name']} text-slate-950 dark:text-slate-400 `}
+      >
+        {data.skill_name}
+      </div>
       <ProgressBar value={data.rating} />
     </div>
   );

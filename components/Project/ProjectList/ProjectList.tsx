@@ -2,6 +2,7 @@ import React from 'react';
 import style from './ProjectList.module.css';
 import { IProject } from '@nhr/utils';
 import ProjectItem from '../ProjectItem/ProjectItem';
+import { Card } from '@nhr/components';
 
 export type ProjectListProps = {
   className?: string;
@@ -16,7 +17,9 @@ const ProjectList: React.FC<ProjectListProps> = ({ className, data }) => {
     <ul className={`${style['project-list']} ${className || ''}`}>
       {data.map((project) => (
         <li key={project._id}>
-          <ProjectItem data={project} />
+          <Card>
+            <ProjectItem data={project} />
+          </Card>
         </li>
       ))}
     </ul>
