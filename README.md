@@ -67,6 +67,7 @@ Here are the environnement variables that the apps requires:
 
 ```
 NEXT_PUBLIC_PAGINATED_PER_PAGE=6
+NEXT_PUBLIC_API_ENDPOINT=http://localhost:3000 // or the production endpoints `https://nirinasoa-herilanto.vercel.app`
 ```
 
 ## API Reference
