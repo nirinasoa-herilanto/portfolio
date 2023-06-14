@@ -18,10 +18,23 @@ export { default as LoadingSpinner } from './UI/LoadingSpinner/LoadingSpinner';
 
 // ----
 export { default as Header } from './Header/Header';
+export { default as Footer } from './Footer/Footer';
 export { default as Hero } from './Hero/Hero';
 export { default as Summary } from './Summary/Summary';
 export { default as Welcoming } from './Welcoming/Welcoming';
 export { default as Logo } from './Logo/Logo';
+
+// Skill
+export { default as SkillItem } from './Skill/SkillItem/SkillItem';
+export { default as SkillList } from './Skill/SkillList/SkillList';
+
+// Formation
+export { default as FormationItem } from './Formation/FormationItem/FormationItem';
+export { default as FormationList } from './Formation/FormationList/FormationList';
+
+// Project
+export { default as ProjectItem } from './Project/ProjectItem/ProjectItem';
+export { default as ProjectList } from './Project/ProjectList/ProjectList';
 
 // Theme providers
 export { default as ThemeWrapper } from './ThemeWrapper';
