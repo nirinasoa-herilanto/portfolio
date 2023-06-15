@@ -8,3 +8,7 @@
     row-gap: 36px;
   }
 }
+
+.project-list__card:hover {
+  transform: translateY(-6px);
+}

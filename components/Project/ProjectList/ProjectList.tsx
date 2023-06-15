@@ -17,7 +17,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ className, data }) => {
     <ul className={`${style['project-list']} ${className || ''}`}>
       {data.map((project) => (
         <li key={project._id}>
-          <Card>
+          <Card className={style['project-list__card']}>
             <ProjectItem data={project} />
           </Card>
         </li>
