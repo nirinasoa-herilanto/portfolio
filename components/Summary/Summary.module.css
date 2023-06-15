@@ -7,14 +7,14 @@
 .summary div {
   font-size: 44px;
 
-  @screen md {
+  @screen lg {
     font-size: 82px;
   }
 }
 .summary span {
   font-size: 44px;
 
-  @screen md {
+  @screen lg {
     font-size: 82px;
   }
 }

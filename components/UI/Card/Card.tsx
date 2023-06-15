@@ -10,7 +10,7 @@ export type CardProps = {
 
 const Card: React.FC<CardProps> = ({ className, children, ...rest }) => {
   return (
-    <div className={`${style.card} bg-white dark:bg-blue-100`} {...rest}>
+    <div className={`${style.card} ${className || ''} bg-white`} {...rest}>
       {children}
     </div>
   );

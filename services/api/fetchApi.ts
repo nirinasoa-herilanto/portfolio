@@ -1,5 +1,3 @@
-import 'server-only';
-
 /**
  * Use to fetch data by providing url endpoints
  * @param {string} url  endpoints, by default "/api/..."
@@ -32,6 +30,6 @@ export const fetchApi = async <T>(
 
     return data;
   } catch (error: any) {
-    throw new Error(error?.message);
+    throw new Error(error?.message || error);
   }
 };
