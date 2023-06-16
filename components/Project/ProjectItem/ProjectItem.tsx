@@ -32,7 +32,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ className, data }) => {
         {truncate(data.project_description, 52)}
       </p>
 
-      <Link className="text-blue-600 dark:text-blue-800" href={'/'}>
+      <Link
+        className="text-blue-600 dark:text-blue-800"
+        href={`/projects/${data.slug}`}
+      >
         more details
       </Link>
     </div>
