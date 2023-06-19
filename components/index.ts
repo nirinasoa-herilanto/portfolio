@@ -23,6 +23,8 @@ export { default as Hero } from './Hero/Hero';
 export { default as Summary } from './Summary/Summary';
 export { default as Welcoming } from './Welcoming/Welcoming';
 export { default as Logo } from './Logo/Logo';
+export { default as FitWrapper } from './FitWrapper/FitWrapper';
+export { default as Contacts } from './Contacts/Contacts';
 
 // Skill
 export { default as SkillItem } from './Skill/SkillItem/SkillItem';
