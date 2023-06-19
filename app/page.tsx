@@ -19,12 +19,12 @@ export default async function Homepage() {
     <section className="homepage">
       <Hero />
 
-      <div className="my-skills mb-12">
+      <div className="my-skills my-16">
         <h1 className="mb-8">My skills</h1>
         <SkillList data={data} />
       </div>
 
-      <div className="my-projects mb-12">
+      <div className="my-projects mb-16">
         <h1 className="mb-8">My projects</h1>
         <ProjectList data={projects} />
       </div>
