@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
 import { AppStoreProvider } from '@nhr/store';
-import { Header, ThemeWrapper } from '@nhr/components';
+import { Footer, Header, ThemeWrapper } from '@nhr/components';
 
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['500'] });
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Nirinasoa Herilanto',
   description:
     'Hello guys, here is my portfolio as a full-stack web and React.JS developer',
-  keywords: `full-stack web developer, React.JS developer`,
+  keywords: `full-stack developer, React developer`,
 };
 
 export default function RootLayout({
@@ -27,6 +27,7 @@ export default function RootLayout({
           <AppStoreProvider>
             <Header />
             <main className="fit">{children}</main>
+            <Footer />
           </AppStoreProvider>
         </ThemeWrapper>
       </body>
