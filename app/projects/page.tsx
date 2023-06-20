@@ -19,9 +19,9 @@ export default function ProjectsPage() {
     setPage((prevPage) => prevPage + 1);
     setIsLoading(true);
 
-    const { data } = await fetchApi<ICustomResponse<IProject[]>>(
-      `/api/projects?page=${page + 1}`
-    );
+    const { data } = await fetchApi<ICustomResponse<IProject[]>>({
+      url: `/api/projects?page=${page + 1}`,
+    });
 
     data && setProjects((prevProjects) => [...prevProjects, ...data]);
 
@@ -55,9 +55,10 @@ export default function ProjectsPage() {
   useEffect(() => {
     (async () => {
       setLoadingData(true);
-      const { data, results } = await fetchApi<ICustomResponse<IProject[]>>(
-        `/api/projects`
-      );
+      const { data, results } = await fetchApi<ICustomResponse<IProject[]>>({
+        url: `/api/projects`,
+        nextOptions: { revalidate: 1000 * 60 * 60 * 5 }, // each 5 hours
+      });
 
       setLoadingData(false);
       data && setProjects(data);

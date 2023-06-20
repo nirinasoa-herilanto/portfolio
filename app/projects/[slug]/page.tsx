@@ -13,9 +13,9 @@ interface IParams {
 }
 
 export async function generateMetadata({ params }: IParams): Promise<Metadata> {
-  const { data } = await fetchApi<ICustomResponse<IProject>>(
-    `${appConfig.apiEndpoint}/api/projects/${params.slug}`
-  );
+  const { data } = await fetchApi<ICustomResponse<IProject>>({
+    url: `${appConfig.apiEndpoint}/api/projects/${params.slug}`,
+  });
 
   return {
     title: `${data.project_title} | Project`,
@@ -23,9 +23,10 @@ export async function generateMetadata({ params }: IParams): Promise<Metadata> {
 }
 
 export default async function ProjectPage({ params }: IParams) {
-  const { data } = await fetchApi<ICustomResponse<IProject>>(
-    `${appConfig.apiEndpoint}/api/projects/${params.slug}`
-  );
+  const { data } = await fetchApi<ICustomResponse<IProject>>({
+    url: `${appConfig.apiEndpoint}/api/projects/${params.slug}`,
+    nextOptions: { revalidate: 1000 * 60 * 60 * 5 },
+  });
 
   return (
     <section className="project">
