@@ -1,2 +1,17 @@
 .footer {
+  @apply py-16;
+}
+
+.footer__wrapper {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+    gap: 32px;
+  }
 }

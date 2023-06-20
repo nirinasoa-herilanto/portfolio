@@ -1,0 +1,21 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CONTACT-ITEM STYLES */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.contact-item__icon--light {
+  font-size: 32px;
+  color: var(--white);
+}
+.contact-item__icon--dark {
+  font-size: 32px;
+  color: var(--zinc);
+}
