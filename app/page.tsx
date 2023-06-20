@@ -8,13 +8,15 @@ import { Hero, ProjectList, SkillList } from '@nhr/components';
 import Link from 'next/link';
 
 export default async function Homepage() {
-  const { data } = await fetchApi<ICustomResponse<ISkill[]>>(
-    `${appConfig.apiEndpoint}/api/skills`
-  );
+  const { data } = await fetchApi<ICustomResponse<ISkill[]>>({
+    url: `${appConfig.apiEndpoint}/api/skills`,
+    nextOptions: { revalidate: 1000 * 60 * 60 * 5 }, // each 5 hours
+  });
 
-  const { data: projects } = await fetchApi<ICustomResponse<IProject[]>>(
-    `${appConfig.apiEndpoint}/api/projects`
-  );
+  const { data: projects } = await fetchApi<ICustomResponse<IProject[]>>({
+    url: `${appConfig.apiEndpoint}/api/projects`,
+    nextOptions: { revalidate: 1000 * 60 * 60 * 5 },
+  });
 
   return (
     <section className="homepage">

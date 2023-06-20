@@ -1,3 +1,10 @@
+export type FetchApiParams = {
+  url: string;
+  requestMethod?: string;
+  bodyOptions?: BodyInit;
+  nextOptions?: NextFetchRequestConfig;
+};
+
 /**
  * Use to fetch data by providing url endpoints
  * @param {string} url  endpoints, by default "/api/..."
@@ -6,12 +13,12 @@
  * @param nextOptions   next context, allow us to enable ISR (revalidate)
  * @returns data
  */
-export const fetchApi = async <T>(
-  url: string,
-  requestMethod?: string,
-  bodyOptions?: BodyInit,
-  nextOptions?: NextFetchRequestConfig
-): Promise<T> => {
+export const fetchApi = async <T>({
+  url,
+  requestMethod,
+  bodyOptions,
+  nextOptions,
+}: FetchApiParams): Promise<T> => {
   try {
     const response = await fetch(url, {
       headers: {
