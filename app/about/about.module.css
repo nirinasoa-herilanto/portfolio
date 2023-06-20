@@ -1,0 +1,23 @@
+.about {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.about__hero {
+  display: grid;
+  gap: 52px;
+}
+
+.profile {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .about__hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 52px;
+  }
+}
