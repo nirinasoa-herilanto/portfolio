@@ -4,7 +4,12 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
 import { AppStoreProvider } from '@nhr/store';
-import { Footer, Header, ThemeWrapper } from '@nhr/components';
+import {
+  ApiQueryProvider,
+  Footer,
+  Header,
+  ThemeWrapper,
+} from '@nhr/components';
 
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['500'] });
 
@@ -24,11 +29,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <ThemeWrapper>
-          <AppStoreProvider>
-            <Header />
-            <main className="fit">{children}</main>
-            <Footer />
-          </AppStoreProvider>
+          <ApiQueryProvider>
+            <AppStoreProvider>
+              <Header />
+              <main className="fit">{children}</main>
+              <Footer />
+            </AppStoreProvider>
+          </ApiQueryProvider>
         </ThemeWrapper>
       </body>
     </html>

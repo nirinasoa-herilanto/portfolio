@@ -5,6 +5,7 @@ import { appConfig } from '@nhr/config';
 import { ICustomResponse, IProject, ISkill } from '@nhr/utils';
 
 import { Hero, ProjectList, SkillList } from '@nhr/components';
+import Link from 'next/link';
 
 export default async function Homepage() {
   const { data } = await fetchApi<ICustomResponse<ISkill[]>>(
@@ -27,6 +28,10 @@ export default async function Homepage() {
       <div className="my-projects mb-16">
         <h1 className="mb-8">My projects</h1>
         <ProjectList data={projects} />
+
+        <div className="my-8 text-center">
+          <Link href={'/projects'}>View all my projects</Link>
+        </div>
       </div>
     </section>
   );

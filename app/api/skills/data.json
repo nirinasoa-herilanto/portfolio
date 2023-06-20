@@ -33,5 +33,20 @@
     "_id": "skill-7",
     "skill_name": "Flask & SQLAlchemy (ORM)",
     "rating": 3.5
+  },
+  {
+    "_id": "skill-8",
+    "skill_name": "Firebase",
+    "rating": 2.5
+  },
+  {
+    "_id": "skill-9",
+    "skill_name": "Mongo DB",
+    "rating": 3
+  },
+  {
+    "_id": "skill-10",
+    "skill_name": "PostgreSQL",
+    "rating": 2.5
   }
 ]

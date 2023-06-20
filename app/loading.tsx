@@ -1,5 +1,9 @@
 import { LoadingSpinner } from '@nhr/components';
 
 export default function Loading() {
-  return <LoadingSpinner />;
+  return (
+    <div className="w-full h-96 flex justify-center items-center">
+      <LoadingSpinner />
+    </div>
+  );
 }
