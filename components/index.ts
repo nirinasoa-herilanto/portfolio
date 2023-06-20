@@ -40,3 +40,6 @@ export { default as ProjectList } from './Project/ProjectList/ProjectList';
 
 // Theme providers
 export { default as ThemeWrapper } from './ThemeWrapper';
+
+// React Query provider
+export { default as ApiQueryProvider } from './ApiQueryProvider';
