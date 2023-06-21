@@ -1,11 +1,18 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import style from './CertificationItem.module.css';
 
 import { ICertification } from '@nhr/utils';
 
-import { FcCalendar, FcDocument, FcInfo, FcSettings } from 'react-icons/fc';
+import {
+  FcApproval,
+  FcCalendar,
+  FcDocument,
+  FcInfo,
+  FcSettings,
+} from 'react-icons/fc';
 import { FaCode, FaMinus, FaPlus } from 'react-icons/fa';
 
 export type CertificationItemProps = {
@@ -62,6 +69,13 @@ const CertificationItem: React.FC<CertificationItemProps> = ({
           <div className="flex items-center gap-2">
             <FcInfo /> {data.certification_type}
           </div>
+
+          {data.is_completed && (
+            <div className="flex items-center gap-2">
+              <FcApproval />{' '}
+              <Link href={data.certification_link}>Certification</Link>
+            </div>
+          )}
 
           <div className="certification-description">
             <div className="mb-4 flex items-center gap-2">

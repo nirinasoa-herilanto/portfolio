@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import style from './FormationItem.module.css';
 
 import { IFormation } from '@nhr/utils';
 
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { FcCalendar, FcDocument, FcInfo } from 'react-icons/fc';
+import { FcCalendar, FcDiploma2, FcDocument, FcInfo } from 'react-icons/fc';
 
 export type FormationItemProps = {
   className?: string;
@@ -53,6 +54,12 @@ const FormationItem: React.FC<FormationItemProps> = ({ className, data }) => {
           <div className="flex items-center gap-2">
             <FcInfo /> {data.formation_type}
           </div>
+
+          {data.is_completed && data.reward_link && (
+            <div className="flex items-center gap-2">
+              <FcDiploma2 /> <Link href={data.reward_link}>Diploma</Link>
+            </div>
+          )}
 
           <div className="formation-description">
             <div className="mb-4 flex items-center gap-2">
