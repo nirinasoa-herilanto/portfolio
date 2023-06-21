@@ -3,7 +3,26 @@ import Image from 'next/image';
 
 import { aboutWording } from './about.wording';
 
-export default function AboutPage() {
+import { fetchApi } from '@nhr/services';
+
+import { ICertification, ICustomResponse, IFormation } from '@nhr/utils';
+
+import { CertificationList, FormationList } from '@nhr/components';
+import { appConfig } from '@nhr/config';
+
+export default async function AboutPage() {
+  const { data: formations } = await fetchApi<ICustomResponse<IFormation[]>>({
+    url: `${appConfig.apiEndpoint}/api/formations`,
+    nextOptions: { revalidate: 1000 * 60 * 60 * 5 },
+  });
+
+  const { data: certifications } = await fetchApi<
+    ICustomResponse<ICertification[]>
+  >({
+    url: `${appConfig.apiEndpoint}/api/certifications`,
+    nextOptions: { revalidate: 1000 * 60 * 60 * 5 },
+  });
+
   return (
     <section className={`${style.about} fit`}>
       <div className={`${style['about__hero']}`}>
@@ -24,13 +43,17 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* <div className="my-8">
+      <div className="my-8">
         <h1>University course and training</h1>
+
+        <FormationList className="mt-4" data={formations} />
       </div>
 
       <div className="my-8">
         <h1>Certitifications</h1>
-      </div> */}
+
+        <CertificationList className="mt-4" data={certifications} />
+      </div>
     </section>
   );
 }
