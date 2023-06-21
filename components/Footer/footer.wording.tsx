@@ -1,8 +1,5 @@
 export const footerWording = {
-  sumUp: `Open to work, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, fuga
-  inventore nisi quos fugit odio error doloremque, itaque rem
-  molestias iure maiores facere aliquid atque recusandae eligendi amet
-  ab eaque?`,
+  sumUp: `Hey, here are my contacts, and it will be a pleasure for me to discuss further with you :)`,
   location: 'Sabotsy-Namehana, Antananarivo Avaradrano, Madagascar',
   phoneNumber: '+261 38 17 645 87',
   email: 'nirinasoa.herilanto@gmail.com',

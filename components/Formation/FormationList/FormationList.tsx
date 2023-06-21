@@ -2,7 +2,8 @@ import React from 'react';
 import style from './FormationList.module.css';
 
 import { IFormation } from '@nhr/utils';
-import FormationItem from '../FormationItem/FormationItem';
+
+import { FormationItem } from '@nhr/components';
 
 export type FormationListProps = {
   className?: string;
