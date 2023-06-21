@@ -1,0 +1,18 @@
+.certification-item {
+}
+
+.certification-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certification-item__header span {
+  font-size: 24px;
+}
+
+.certification-item__icon {
+  font-size: 20px;
+  color: #1e40af;
+  cursor: pointer;
+}

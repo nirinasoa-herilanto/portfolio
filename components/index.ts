@@ -34,6 +34,10 @@ export { default as SkillList } from './Skill/SkillList/SkillList';
 export { default as FormationItem } from './Formation/FormationItem/FormationItem';
 export { default as FormationList } from './Formation/FormationList/FormationList';
 
+// Certification
+export { default as CertificationItem } from './Certification/CertificationItem/CertificationItem';
+export { default as CertificationList } from './Certification/CertificationList/CertificationList';
+
 // Project
 export { default as ProjectItem } from './Project/ProjectItem/ProjectItem';
 export { default as ProjectList } from './Project/ProjectList/ProjectList';
