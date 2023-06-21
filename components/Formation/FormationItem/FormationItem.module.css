@@ -1,2 +1,18 @@
 .formation-item {
 }
+
+.formation-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formation-item__header span {
+  font-size: 24px;
+}
+
+.formation-item__icon {
+  font-size: 20px;
+  color: #1e40af;
+  cursor: pointer;
+}
