@@ -14,14 +14,14 @@ import { CertificationList, FormationList } from '@nhr/components';
 export default async function AboutPage() {
   const { data: formations } = await fetchApi<ICustomResponse<IFormation[]>>({
     url: `${appConfig.apiEndpoint}/api/formations`,
-    cacheOptions: 'no-store',
+    nextOptions: { revalidate: 1000 * 60 * 30 }, // each 30 minutes
   });
 
   const { data: certifications } = await fetchApi<
     ICustomResponse<ICertification[]>
   >({
     url: `${appConfig.apiEndpoint}/api/certifications`,
-    cacheOptions: 'no-store',
+    nextOptions: { revalidate: 1000 * 60 * 30 }, // each 30 minutes
   });
 
   return (
