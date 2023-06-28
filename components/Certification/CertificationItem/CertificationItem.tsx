@@ -6,14 +6,9 @@ import style from './CertificationItem.module.css';
 
 import { ICertification } from '@nhr/utils';
 
-import {
-  FcApproval,
-  FcCalendar,
-  FcDocument,
-  FcInfo,
-  FcSettings,
-} from 'react-icons/fc';
-import { FaCode, FaMinus, FaPlus } from 'react-icons/fa';
+import { FcApproval, FcCalendar, FcInfo } from 'react-icons/fc';
+import { FaMinus, FaPlus } from 'react-icons/fa';
+import { Description, DisplayStack, InProgress } from '@nhr/components';
 
 export type CertificationItemProps = {
   className?: string;
@@ -59,10 +54,7 @@ const CertificationItem: React.FC<CertificationItemProps> = ({
                 <span>{`Completed on ${data.certified_at}`}</span>
               </>
             ) : (
-              <div className="p-2 text-slate-950 flex items-center gap-2 bg-yellow-500">
-                <FcSettings />
-                {' In progress'}
-              </div>
+              <InProgress />
             )}
           </div>
 
@@ -77,27 +69,11 @@ const CertificationItem: React.FC<CertificationItemProps> = ({
             </div>
           )}
 
-          <div className="certification-description">
-            <div className="mb-4 flex items-center gap-2">
-              <FcDocument /> {'Description:'}
-            </div>
+          <Description description={data.description} />
 
-            <p>{data.description}</p>
-          </div>
-
-          <div className="tech-stack">
-            <div className="mb-4 flex items-center gap-2">
-              <FaCode /> {'Stacks:'}
-            </div>
-
-            <ul className="flex gap-2">
-              {data.tech_stacks.map((stack) => (
-                <li className="p-2 dark:text-slate-950 bg-blue-200" key={stack}>
-                  {stack}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {data.tech_stacks.length !== 0 && (
+            <DisplayStack data={data.tech_stacks} />
+          )}
         </div>
       )}
     </div>

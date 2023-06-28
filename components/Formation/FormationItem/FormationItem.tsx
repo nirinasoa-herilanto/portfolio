@@ -7,7 +7,8 @@ import style from './FormationItem.module.css';
 import { IFormation } from '@nhr/utils';
 
 import { FaPlus, FaMinus } from 'react-icons/fa';
-import { FcCalendar, FcDiploma2, FcDocument, FcInfo } from 'react-icons/fc';
+import { FcDiploma2, FcDocument, FcInfo } from 'react-icons/fc';
+import { DateMarkup, Description, DisplayStack } from '@nhr/components';
 
 export type FormationItemProps = {
   className?: string;
@@ -46,10 +47,7 @@ const FormationItem: React.FC<FormationItemProps> = ({ className, data }) => {
         <div
           className={`${style['formation-item__content']} mt-4 flex flex-col gap-4`}
         >
-          <div className="flex items-center gap-2">
-            <FcCalendar />
-            <span>{`${data.started_at} - ${data.end_at}`}</span>
-          </div>
+          <DateMarkup startedAt={data.started_at} endAt={data.end_at} />
 
           <div className="flex items-center gap-2">
             <FcInfo /> {data.formation_type}
@@ -61,12 +59,12 @@ const FormationItem: React.FC<FormationItemProps> = ({ className, data }) => {
             </div>
           )}
 
-          <div className="formation-description">
-            <div className="mb-4 flex items-center gap-2">
-              <FcDocument /> {'Description:'}
-            </div>
+          <div className="formation-detail">
+            <Description description={data.description} />
 
-            <p>{data.description || '---'}</p>
+            {data.tech_stacks.length !== 0 && (
+              <DisplayStack data={data.tech_stacks} />
+            )}
           </div>
         </div>
       )}
