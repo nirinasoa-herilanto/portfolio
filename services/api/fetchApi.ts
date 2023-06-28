@@ -1,6 +1,7 @@
 export type FetchApiParams = {
   url: string;
   requestMethod?: string;
+  cacheOptions?: RequestCache;
   bodyOptions?: BodyInit;
   nextOptions?: NextFetchRequestConfig;
 };
@@ -16,6 +17,7 @@ export type FetchApiParams = {
 export const fetchApi = async <T>({
   url,
   requestMethod,
+  cacheOptions,
   bodyOptions,
   nextOptions,
 }: FetchApiParams): Promise<T> => {
@@ -25,6 +27,7 @@ export const fetchApi = async <T>({
         'Content-Type': 'application/json',
         method: requestMethod || 'GET',
       },
+      ...(cacheOptions && { cache: cacheOptions }),
       ...(bodyOptions && { body: bodyOptions }),
       ...(nextOptions && { next: nextOptions }),
     });

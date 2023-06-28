@@ -5,22 +5,23 @@ import { aboutWording } from './about.wording';
 
 import { fetchApi } from '@nhr/services';
 
+import { appConfig } from '@nhr/config';
+
 import { ICertification, ICustomResponse, IFormation } from '@nhr/utils';
 
 import { CertificationList, FormationList } from '@nhr/components';
-import { appConfig } from '@nhr/config';
 
 export default async function AboutPage() {
   const { data: formations } = await fetchApi<ICustomResponse<IFormation[]>>({
     url: `${appConfig.apiEndpoint}/api/formations`,
-    nextOptions: { revalidate: 1000 * 60 * 60 * 5 },
+    cacheOptions: 'no-store',
   });
 
   const { data: certifications } = await fetchApi<
     ICustomResponse<ICertification[]>
   >({
     url: `${appConfig.apiEndpoint}/api/certifications`,
-    nextOptions: { revalidate: 1000 * 60 * 60 * 5 },
+    cacheOptions: 'no-store',
   });
 
   return (
