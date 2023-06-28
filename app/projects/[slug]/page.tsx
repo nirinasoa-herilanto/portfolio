@@ -7,6 +7,7 @@ import { appConfig } from '@nhr/config';
 import { fetchApi } from '@nhr/services';
 
 import { ICustomResponse, IProject } from '@nhr/utils';
+import { DateMarkup, DisplayStack, InProgress } from '@nhr/components';
 
 interface IParams {
   params: { slug: string };
@@ -43,24 +44,20 @@ export default async function ProjectPage({ params }: IParams) {
 
         <div className="project-detail">
           <h1 className="mb-4">{data.project_title}</h1>
+
           <Link href={data.repo_link}>repo link</Link>
+
+          <DateMarkup startedAt={data?.started_at} endAt={data?.end_at} />
+
+          {!data.is_completed && <InProgress />}
+
           <p className="text-justify mt-6">{data.project_description}</p>
         </div>
       </div>
 
-      <div className="my-8">
-        <h1 className="my-4">Tech-stacks:</h1>
-        <ul className="flex flex-wrap gap-4">
-          {data.tech_stacks.map((stack) => (
-            <li
-              className="p-4  bg-blue-200 rounded-lg shadow-lg dark:text-slate-950"
-              key={stack}
-            >
-              {stack}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {data.tech_stacks.length !== 0 && (
+        <DisplayStack data={data.tech_stacks} />
+      )}
     </section>
   );
 }
