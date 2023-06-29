@@ -1,5 +1,5 @@
 export const sumWording = {
-  greeting: 'Hello',
+  greeting: 'Hello,',
   firstName: 'Nirinasoa Herilanto',
   jobTitle: 'a full-stack developer',
 };

@@ -7,7 +7,9 @@ import { appConfig } from '@nhr/config';
 import { fetchApi } from '@nhr/services';
 
 import { ICustomResponse, IProject } from '@nhr/utils';
+
 import { DateMarkup, DisplayStack, InProgress } from '@nhr/components';
+import { FaGithub } from 'react-icons/fa';
 
 interface IParams {
   params: { slug: string };
@@ -16,6 +18,7 @@ interface IParams {
 export async function generateMetadata({ params }: IParams): Promise<Metadata> {
   const { data } = await fetchApi<ICustomResponse<IProject>>({
     url: `${appConfig.apiEndpoint}/api/projects/${params.slug}`,
+    nextOptions: { revalidate: 1000 * 60 * 30 }, // each 30 min
   });
 
   return {
@@ -26,7 +29,7 @@ export async function generateMetadata({ params }: IParams): Promise<Metadata> {
 export default async function ProjectPage({ params }: IParams) {
   const { data } = await fetchApi<ICustomResponse<IProject>>({
     url: `${appConfig.apiEndpoint}/api/projects/${params.slug}`,
-    nextOptions: { revalidate: 1000 * 60 * 60 * 5 },
+    nextOptions: { revalidate: 1000 * 60 * 30 }, // each 30 min
   });
 
   return (
@@ -42,10 +45,12 @@ export default async function ProjectPage({ params }: IParams) {
           />
         </div>
 
-        <div className="project-detail">
+        <div className="project-detail flex flex-col gap-4">
           <h1 className="mb-4">{data.project_title}</h1>
 
-          <Link href={data.repo_link}>repo link</Link>
+          <Link className="w-32 flex items-center gap-2" href={data.repo_link}>
+            <FaGithub /> {'repo link'}
+          </Link>
 
           <DateMarkup startedAt={data?.started_at} endAt={data?.end_at} />
 
@@ -56,7 +61,7 @@ export default async function ProjectPage({ params }: IParams) {
       </div>
 
       {data.tech_stacks.length !== 0 && (
-        <DisplayStack data={data.tech_stacks} />
+        <DisplayStack className="my-14" data={data.tech_stacks} />
       )}
     </section>
   );

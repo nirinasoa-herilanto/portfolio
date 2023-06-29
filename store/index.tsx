@@ -23,4 +23,7 @@ export const AppStoreProvider = React.memo(
   }
 );
 
+/**
+ * Use to consume store
+ */
 export const useAppStore = () => React.useContext(AppStoreContext);

@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
 import { AppStoreProvider } from '@nhr/store';
+
 import {
   ApiQueryProvider,
   Footer,

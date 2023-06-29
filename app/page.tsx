@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { fetchApi } from '@nhr/services';
 
 import { appConfig } from '@nhr/config';
@@ -5,17 +7,16 @@ import { appConfig } from '@nhr/config';
 import { ICustomResponse, IProject, ISkill } from '@nhr/utils';
 
 import { Hero, ProjectList, SkillList } from '@nhr/components';
-import Link from 'next/link';
 
 export default async function Homepage() {
   const { data } = await fetchApi<ICustomResponse<ISkill[]>>({
     url: `${appConfig.apiEndpoint}/api/skills`,
-    nextOptions: { revalidate: 1000 * 60 * 60 * 5 }, // each 5 hours
+    nextOptions: { revalidate: 1000 * 60 * 30 }, // each 30 min
   });
 
   const { data: projects } = await fetchApi<ICustomResponse<IProject[]>>({
     url: `${appConfig.apiEndpoint}/api/projects`,
-    nextOptions: { revalidate: 1000 * 60 * 60 * 5 },
+    nextOptions: { revalidate: 1000 * 60 * 30 },
   });
 
   return (

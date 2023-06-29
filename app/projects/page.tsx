@@ -57,7 +57,7 @@ export default function ProjectsPage() {
       setLoadingData(true);
       const { data, results } = await fetchApi<ICustomResponse<IProject[]>>({
         url: `/api/projects`,
-        nextOptions: { revalidate: 1000 * 60 * 60 * 5 }, // each 5 hours
+        nextOptions: { revalidate: 1000 * 60 * 30 }, // each 30 min
       });
 
       setLoadingData(false);
